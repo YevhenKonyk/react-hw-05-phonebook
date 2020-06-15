@@ -1,0 +1,20 @@
+.header {
+  padding: 5px 0 25px 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+}
+
+.list {
+  text-transform: uppercase;
+}
