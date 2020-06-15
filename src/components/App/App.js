@@ -4,6 +4,9 @@ import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Section from '../Section/Section';
 import Footer from '../Footer/Footer';
+import ContactEditor from '../ContactEditor/ContactEditor';
+import ContactFilter from '../ContactFilter/ContactFilter';
+import ContactList from '../ContactList/ContactList';
 
 function App() {
   return (
@@ -11,7 +14,9 @@ function App() {
       <Header />
       <Main>
         <Section title="Phonebook">
-          <p>content here...</p>
+          <ContactEditor />
+          <ContactFilter />
+          <ContactList />
         </Section>
       </Main>
       <Footer />
