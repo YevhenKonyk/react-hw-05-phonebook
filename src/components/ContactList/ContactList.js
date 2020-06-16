@@ -1,15 +1,38 @@
 import React from 'react';
-import styles from './ContactList.module.css';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Contact from '../Contact/Contact';
+import { getFilteredContacts } from '../../redux/contacts/contactsSelectors';
+import styles from './ContactList.module.css';
 
-const ContactList = () => (
+const ContactList = ({ items }) => (
   <>
-    <ul className={styles.list}>
-      <li className={styles.listItem}>
-        <Contact />
-      </li>
-    </ul>
+    {items.length > 0 && (
+      <ul className={styles.list}>
+        {items.map(item => (
+          <li key={item.id} className={styles.listItem}>
+            <Contact id={item.id} />
+          </li>
+        ))}
+      </ul>
+    )}
   </>
 );
 
-export default ContactList;
+const mapStateToProps = state => ({
+  items: getFilteredContacts(state),
+});
+
+ContactList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
+};
+
+ContactList.defaultProps = {
+  items: [],
+};
+
+export default connect(mapStateToProps, null)(ContactList);
