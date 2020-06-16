@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "name": "Anna Dvorskaya",
+      "phoneNumber": "123-456-4569",
+      "id": 1
+    },
+    {
+      "name": "Viktor Saga",
+      "phoneNumber": "123-654-9870",
+      "id": 2
+    },
+    {
+      "name": "Vova Zelya",
+      "phoneNumber": "123-456-7890",
+      "id": 3
+    }
+  ]
+}
