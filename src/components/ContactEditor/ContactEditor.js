@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import { connect } from 'react-redux';
-import * as contactsOperations from '../../redux/contacts/contactsOperations';
 import styles from './ContactEditor.module.css';
 
-class ContactEditor extends Component {
+export default class ContactEditor extends Component {
   // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     onAddContact: PropTypes.func.isRequired,
@@ -73,9 +70,3 @@ class ContactEditor extends Component {
     );
   }
 }
-
-const mapDispatchToProps = {
-  onAddContact: contactsOperations.addContact,
-};
-
-export default connect(null, mapDispatchToProps)(ContactEditor);

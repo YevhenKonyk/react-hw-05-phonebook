@@ -1,9 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { connect } from 'react-redux';
-import { getContactById } from '../../redux/contacts/contactsSelectors';
-import { deleteContact } from '../../redux/contacts/contactsOperations';
 import styles from './Contact.module.css';
 
 const Contact = ({ contact, onDeleteContact }) => (
@@ -22,14 +18,6 @@ const Contact = ({ contact, onDeleteContact }) => (
   </>
 );
 
-const mapStateToProps = (state, props) => ({
-  contact: getContactById(state, props.id),
-});
-
-const mapDispatchToProps = dispatch => ({
-  onDeleteContact: id => dispatch(deleteContact(id)),
-});
-
 Contact.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -39,4 +27,4 @@ Contact.propTypes = {
   onDeleteContact: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Contact);
+export default Contact;
