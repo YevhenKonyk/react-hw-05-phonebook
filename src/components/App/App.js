@@ -30,7 +30,13 @@ export default class App extends Component {
         <Main>
           <Section title="Phonebook">
             <ContactEditor />
+          </Section>
+
+          <Section title="Find contact by name">
             <ContactFilter />
+          </Section>
+
+          <Section title="Available contacts">
             <ContactList />
           </Section>
         </Main>

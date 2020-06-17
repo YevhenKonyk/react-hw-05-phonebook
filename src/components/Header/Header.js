@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
+import logo from '../../img/phonebook.png';
 
 const Header = () => (
   <>
@@ -7,7 +8,7 @@ const Header = () => (
       <div className={styles.container}>
         <nav className={styles.navigation}>
           <a href="\" className={styles.logo}>
-            <img src="" alt="Phonebook logo" />
+            <img src={logo} alt="Phonebook logo" />
           </a>
           <ul className={styles.list}>
             <li>Home</li>

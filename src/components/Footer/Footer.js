@@ -6,7 +6,7 @@ const Footer = () => (
     <footer>
       <div className={styles.container}>
         <p className={styles.copyright}>
-          &copy; 2020 Phonebook by:&nbsp;
+          &copy; {new Date().getFullYear()} Phonebook by:&nbsp;
           <span className={styles.author}>Yevhen Konyk</span>
         </p>
       </div>
