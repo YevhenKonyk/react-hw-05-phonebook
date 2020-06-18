@@ -14,6 +14,9 @@ const ContactList = ({ items }) => (
         ))}
       </ul>
     )}
+    {items.length <= 0 && (
+      <p className={styles.message}>No contacts provided yet...</p>
+    )}
   </>
 );
 
