@@ -1,0 +1,9 @@
+.container {
+  background-color: red;
+}
+
+.message {
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}

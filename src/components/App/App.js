@@ -7,6 +7,7 @@ import Section from '../Section/Section';
 import Footer from '../Footer/Footer';
 
 import Loader from '../Loader/LoaderContainer';
+import ErrorNotification from '../ErrorNotification/ErrorNotificationContainer';
 
 import ContactEditor from '../ContactEditor/ContactEditorContainer';
 import ContactFilter from '../ContactFilter/ContactFilterContainer';
@@ -31,6 +32,7 @@ export default class App extends Component {
       <>
         <Header />
         <Main>
+          <ErrorNotification />
           <Section title="Phonebook">
             <ContactEditor />
           </Section>
