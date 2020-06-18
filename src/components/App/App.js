@@ -5,6 +5,9 @@ import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Section from '../Section/Section';
 import Footer from '../Footer/Footer';
+
+import Loader from '../Loader/LoaderContainer';
+
 import ContactEditor from '../ContactEditor/ContactEditorContainer';
 import ContactFilter from '../ContactFilter/ContactFilterContainer';
 import ContactList from '../ContactList/ContactListContainer';
@@ -39,6 +42,7 @@ export default class App extends Component {
           <Section title="Available contacts">
             <ContactList />
           </Section>
+          <Loader />
         </Main>
         <Footer />
       </>

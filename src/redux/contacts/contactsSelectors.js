@@ -1,6 +1,7 @@
 export const getAllContacts = state => state.contacts.items;
 export const getContactsLength = state => state.contacts.items.length;
 export const getFilter = state => state.contacts.filter;
+export const isLoading = state => state.contacts.loading;
 
 export const getContactById = (state, id) => {
   const contacts = getAllContacts(state);
